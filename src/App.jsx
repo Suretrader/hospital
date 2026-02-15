@@ -1,5 +1,5 @@
 import  { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "./conponents/Navbar";
+import Header from "./conponents/Header";
 import Footer from "./conponents/Footer";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -7,13 +7,29 @@ import Contacts from "./pages/Contacts";
 import News from "./pages/News";
 import Teams from "./pages/Teams";
 import Home from "./pages/Home";
+import { useEffect, useState } from "react";
+import Preloader from "./conponents/Preloader";
 
 
 function App(){
+const [loading, setLoading] = useState(true)
 
+useEffect(()=> {
+  const handleload = () => setLoading(false)
+
+window.addEventListener('load', handleload)
+return () => window.removeEventListener('load', handleload)
+
+}, [])
+
+if (loading) {
+    return(
+     <Preloader />
+    )
+}
 return(
 <BrowserRouter>
-<Navbar />
+<Header />
 <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
@@ -30,3 +46,4 @@ return(
 
 
 }
+export default App
