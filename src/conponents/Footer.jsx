@@ -3,7 +3,7 @@ import LightLogo from "../assets/ourfriend-light.png"
 import {FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaArrowUp} from 'react-icons/fa'
 const Footer = () => {
   return (
-    <footer className='bg-black text-white mt-16'>
+    <footer className='bg-black text-white'>
       <div className='container mx-auto px-6 py-12 grid md:grid-cols-4 gap-10'>
         {/* logo, about and icon */}
         <section>
@@ -31,10 +31,10 @@ const Footer = () => {
          <section>
          <h4 className='font-semibold'>ABOUT</h4>
          <ul className='space-y-2'>
-             <li>About OHF</li>
-             <li>Careers</li>
-             <li>Blog</li>
-             <li>HMO</li>
+             <li> <a href='/about'>About OHF </a> </li>
+             <li> <a href='/about'>Careers </a></li>
+             <li> <a href='/about'>Blog </a></li>
+             <li> <a href='/hmo'>HMO </a></li>
 
          </ul>
         </section>

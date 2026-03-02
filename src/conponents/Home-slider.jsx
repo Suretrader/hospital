@@ -3,6 +3,7 @@
 
 import { Carousel } from "flowbite-react";
 import { Link } from "react-router-dom";
+import SlideImg from "../assets/health-Care.jpg";
 function Homeslider() {
   return (
          <div  className="w-full">
@@ -17,7 +18,7 @@ function Homeslider() {
         </div>
         </div>
         {/* slider2 */}
-        <div className="relative flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white" style={{backgroundImage:'url("https://img.freepik.com/premium-photo/doctors-talking-with-patient-hospital_482257-146318.jpg")'}}>
+        <div className="relative flex h-full bg-cover items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white" style={{backgroundImage:'url("https://img.freepik.com/premium-photo/doctors-talking-with-patient-hospital_482257-146318.jpg")'}}>
                     <div className="absolute inset-0  bg-black/40 top-1/5 left-[60%] h-fit w-1/3 p-5 rounded ">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">Diagnosis Before Treatment</h1>
             <p className="mb-6 text-lg">We go beyond symptoms to find the root cause of your health concerns.</p>
@@ -25,7 +26,7 @@ function Homeslider() {
         </div>
         </div>
         {/* slider3 */}
-        <div className="relative flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white" style={{backgroundImage: "url('https://img.freepik.com/premium-photo/doctor-clinic-child-with-medical-checkup-consultation-health-wellness-pediatrician-kid-hospital-bed-with-plush-bear-comfort-good-news-healthcare-life-insurance_590464-326597.jpg')"}}>
+        <div className="relative flex h-full items-center bg-cover justify-center bg-gray-400 dark:bg-gray-700 dark:text-white" style={{backgroundImage: "url('https://img.freepik.com/premium-photo/doctor-clinic-child-with-medical-checkup-consultation-health-wellness-pediatrician-kid-hospital-bed-with-plush-bear-comfort-good-news-healthcare-life-insurance_590464-326597.jpg')"}}>
                   <div className="absolute inset-0  bg-black/40 top-1/5 left-20 h-fit w-1/3 p-5 rounded ">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">Holistic Care for Your Well-being</h1>
             <p className="mb-6 text-lg">Caring for your physical, emotional, and mental health.</p>
@@ -34,6 +35,7 @@ function Homeslider() {
           
         </div>
       </Carousel>
+     
     </div>
   );
 }
